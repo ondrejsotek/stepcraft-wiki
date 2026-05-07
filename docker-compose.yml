@@ -1,0 +1,20 @@
+services:
+  wiki:
+    container_name: stepcraft-wiki
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - .:/app
+      - stepcraft_node_modules:/app/node_modules
+      - stepcraft_next:/app/.next
+
+volumes:
+  stepcraft_node_modules:
+  stepcraft_next:

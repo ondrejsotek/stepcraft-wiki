@@ -31,6 +31,23 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to view the project locally.
 
+### Docker Compose (without local npm)
+
+If you do not want to install Node.js/npm locally, run the project in a container:
+
+```bash
+docker compose up --build
+```
+
+Then open [http://localhost:3000](http://localhost:3000).
+
+Useful commands:
+
+```bash
+docker compose down
+docker compose logs -f
+```
+
 **For production:**
 
 ```bash
